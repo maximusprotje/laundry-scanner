@@ -1,38 +1,11 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Was Scanner</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Was Scanner</h1>
-  <video id="video" autoplay playsinline></video>
-  <canvas id="canvas" style="display:none;"></canvas>
-  <div>
-    <button id="snap">Foto maken</button>
+<div id="bins" style="display:none;">
+  <p>Kies een wasmand:</p>
+  <div class="grid">
+    <button class="bin" data-bin="Jules">Jules</button>
+    <button class="bin" data-bin="Maxence">Maxence</button>
+    <button class="bin" data-bin="Maxime">Maxime</button>
+    <button class="bin" data-bin="Marie-alixe">Marie-alixe</button>
+    <button class="bin" data-bin="Tricia">Tricia</button>
+    <button class="bin" data-bin="Christophe">Christophe</button>
   </div>
-  <div id="bins" style="display:none;">
-    <p>Kies een bak:</p>
-    <div class="grid">
-      <button class="bin" data-bin="1">1</button>
-      <button class="bin" data-bin="2">2</button>
-      <button class="bin" data-bin="3">3</button>
-      <button class="bin" data-bin="4">4</button>
-      <button class="bin" data-bin="5">5</button>
-      <button class="bin" data-bin="6">6</button>
-    </div>
-  </div>
-  <script src="app.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker
-        .register('service-worker.js')
-        .then(reg => console.log('ServiceWorker geregistreerd:', reg.scope))
-        .catch(err => console.error('ServiceWorker-fout:', err));
-    }
-  </script>
-</body>
-</html>
+</div>
